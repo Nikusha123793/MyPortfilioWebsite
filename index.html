@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Nika | Creative Front-End Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+
+<body>
+    <!-- Update the header navigation -->
+    <header id="header">
+        <div class="header-container">
+            <div class="logo">
+                <div class="logo_list">
+                    <p>N</p>
+                </div>
+                <h3>Nikoloz Tsertsvadze</h3>
+            </div>
+
+            <nav class="menu" id="main-menu">
+                <a href="#home" class="menu_list">Home</a>
+                <a href="#about" class="menu_list">About</a>
+                <a href="#skills" class="menu_list">Skills</a>
+                <a href="#services" class="menu_list">Services</a>
+                <a href="#projects" class="menu_list">Projects</a>
+                <a href="#contact" class="menu_list">Contact</a>
+            </nav>
+
+            <button class="burger-menu" id="burger-menu">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Update the hero section (add id="home") -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="title-line">Hi, I'm Nikoloz</span>
+                    <span class="title-line">Front-End Developer</span>
+                </h1>
+                <p class="hero-subtitle">I build beautiful, responsive websites with modern technologies</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+            <div class="hero-photo">
+                <div class="photo-frame">
+                    <img src="images/IMG_20250529_193842_101.jpg" alt="Nikoloz Tsertsvadze" class="profile-photo">
+                    <div class="photo-glow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+            </div>
+
+            <div class="about-content-wrapper">
+                <div class="about-content">
+                    <div class="about-text">
+                        <p class="about-paragraph animate-in">Hi! I'm Nika, a 16-year-old web developer passionate about
+                            creating clean, modern, and responsive websites. I specialize in front-end development using
+                            HTML, CSS, Sass, and JavaScript, and I also work with Angular and Firebase.</p>
+
+                        <p class="about-paragraph animate-in">I enjoy building functional and visually appealing user
+                            interfaces, and I'm always learning new technologies to improve my skills. Whether it's a
+                            simple landing page or a more complex project, I love turning ideas into reality.</p>
+
+                        <p class="about-paragraph animate-in">Let's build something awesome together!</p>
+                    </div>
+
+                    <div class="stats-grid animate-in">
+                        <div class="stat-item">
+                            <div class="stat-number">10+</div>
+                            <div class="stat-label">Projects Completed</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Client Satisfaction</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">24/7</div>
+                            <div class="stat-label">Availability</div>
+                        </div>
+                    </div>
+
+                    <div class="skills-tags animate-in">
+                        <span class="skill-tag">HTML</span>
+                        <span class="skill-tag">CSS</span>
+                        <span class="skill-tag">Sass</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Angular</span>
+                        <span class="skill-tag">TypeScript</span>
+                    </div>
+                </div>
+
+                <div class="about-image animate-in">
+                    <div class="image-frame">
+                        <div class="code-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="tech-icons">
+                            <i class="fab fa-html5"></i>
+                            <i class="fab fa-css3-alt"></i>
+                            <i class="fab fa-js"></i>
+                            <i class="fab fa-angular"></i>
+                        </div>
+                        <div class="dots-animation"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills-section">
+        <div class="skills-container">
+            <h2 class="section-title">
+                <span class="title-line">My Skills</span>
+            </h2>
+            <p class="section-subtitle animate-in">Technologies I work with daily</p>
+
+            <div class="skills-grid">
+                <!-- HTML Skill -->
+                <div class="skill-card animate-in">
+                    <div class="skill-icon">
+                        <img src="images/HTML5_logo_and_wordmark.svg.png" alt="HTML" class="skill-img">
+                    </div>
+                    <h3 class="skill-name">HTML</h3>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-level="100"></div>
+                    </div>
+                </div>
+
+                <!-- CSS Skill -->
+                <div class="skill-card animate-in">
+                    <div class="skill-icon">
+                        <img src="images/CSS3_logo_and_wordmark.svg" alt="CSS" class="skill-img">
+                    </div>
+                    <h3 class="skill-name">CSS</h3>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-level="95"></div>
+                    </div>
+                </div>
+
+                <!-- Sass Skill -->
+                <div class="skill-card animate-in">
+                    <div class="skill-icon">
+                        <img src="images/317889.png" alt="Sass" class="skill-img">
+                    </div>
+                    <h3 class="skill-name">Sass</h3>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-level="85"></div>
+                    </div>
+                </div>
+
+                <!-- JavaScript Skill -->
+                <div class="skill-card animate-in">
+                    <div class="skill-icon">
+                        <img src="images/images.png" alt="JavaScript" class="skill-img">
+                    </div>
+                    <h3 class="skill-name">JavaScript</h3>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-level="95"></div>
+                    </div>
+                </div>
+
+                <!-- Angular Skill -->
+                <div class="skill-card animate-in">
+                    <div class="skill-icon">
+                        <img src="images/angular-logo-1-optimized.webp" alt="Angular" class="skill-img">
+                    </div>
+                    <h3 class="skill-name">Angular</h3>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-level="95"></div>
+                    </div>
+                </div>
+
+                <!-- TypeScript Skill -->
+                <div class="skill-card animate-in">
+                    <div class="skill-icon">
+                        <img src="images/Typescript_logo_2020.svg.png" alt="TypeScript" class="skill-img">
+                    </div>
+                    <h3 class="skill-name">TypeScript</h3>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-level="95"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services-section">
+        <div class="services-container">
+            <h2 class="section-title">
+                <span class="title-line">My Services</span>
+            </h2>
+            <p class="section-subtitle animate-in">What I can do for you</p>
+
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card animate-in">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                        <div class="icon-shape"></div>
+                    </div>
+                    <h3 class="service-title">Front-End Development</h3>
+                    <p class="service-description">Building responsive, interactive websites using modern technologies
+                        like HTML5, CSS3, and JavaScript frameworks.</p>
+                    <ul class="service-features">
+                        <li>Responsive Design</li>
+                        <li>Cross-Browser Compatibility</li>
+                        <li>Performance Optimization</li>
+                        <li>Clean, Semantic Code</li>
+                    </ul>
+                    <div class="service-tech">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card animate-in">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                        <div class="icon-shape"></div>
+                    </div>
+                    <h3 class="service-title">Mobile-First Development</h3>
+                    <p class="service-description">Creating websites that look and function perfectly on all devices,
+                        with special focus on mobile experience.</p>
+                    <ul class="service-features">
+                        <li>Mobile-Optimized UI</li>
+                        <li>Touch-Friendly Interactions</li>
+                        <li>Fast Loading Times</li>
+                        <li>Adaptive Layouts</li>
+                    </ul>
+                    <div class="service-tech">
+                        <span>Flexbox</span>
+                        <span>Grid</span>
+                        <span>Media Queries</span>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card animate-in">
+                    <div class="service-icon">
+                        <i class="fab fa-angular"></i>
+                        <div class="icon-shape"></div>
+                    </div>
+                    <h3 class="service-title">Angular Applications</h3>
+                    <p class="service-description">Developing dynamic single-page applications with Angular framework
+                        for rich user experiences.</p>
+                    <ul class="service-features">
+                        <li>Component-Based Architecture</li>
+                        <li>State Management</li>
+                        <li>API Integration</li>
+                        <li>Reusable Modules</li>
+                    </ul>
+                    <div class="service-tech">
+                        <span>Angular</span>
+                        <span>TypeScript</span>
+                        <span>RxJS</span>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card animate-in">
+                    <div class="service-icon">
+                        <i class="fas fa-paint-brush"></i>
+                        <div class="icon-shape"></div>
+                    </div>
+                    <h3 class="service-title">UI/UX Implementation</h3>
+                    <p class="service-description">Translating design mockups into pixel-perfect, accessible, and
+                        user-friendly interfaces.</p>
+                    <ul class="service-features">
+                        <li>Design to Code</li>
+                        <li>Accessibility Standards</li>
+                        <li>Micro-Interactions</li>
+                        <li>Animation Effects</li>
+                    </ul>
+                    <div class="service-tech">
+                        <span>CSS Animations</span>
+                        <span>SVG</span>
+                        <span>WCAG</span>
+                    </div>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-card animate-in">
+                    <div class="service-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <div class="icon-shape"></div>
+                    </div>
+                    <h3 class="service-title">Performance Optimization</h3>
+                    <p class="service-description">Improving website speed and efficiency for better user experience and
+                        SEO rankings.</p>
+                    <ul class="service-features">
+                        <li>Lazy Loading</li>
+                        <li>Code Splitting</li>
+                        <li>Image Optimization</li>
+                        <li>Bundle Analysis</li>
+                    </ul>
+                    <div class="service-tech">
+                        <span>Webpack</span>
+                        <span>Lighthouse</span>
+                        <span>Optimization</span>
+                    </div>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-card animate-in">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                        <div class="icon-shape"></div>
+                    </div>
+                    <h3 class="service-title">Code Review & Consulting</h3>
+                    <p class="service-description">Helping you improve existing codebase with best practices and modern
+                        techniques.</p>
+                    <ul class="service-features">
+                        <li>Code Quality Audit</li>
+                        <li>Best Practices</li>
+                        <li>Architecture Advice</li>
+                        <li>Technical Debt Reduction</li>
+                    </ul>
+                    <div class="service-tech">
+                        <span>ESLint</span>
+                        <span>Clean Code</span>
+                        <span>Patterns</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+        <div class="projects-container">
+            <h2 class="section-title">
+                <span class="title-line">My Projects</span>
+            </h2>
+            <p class="section-subtitle animate-in">Some of my recent work</p>
+
+            <div class="projects-slider">
+                <div class="slider-container">
+                    <!-- Project 1 -->
+                    <div class="project-card animate-in">
+                        <div class="project-image">
+                            <img src="images/Screenshot 2025-08-05 181654.png" alt="Project 1" class="project-img">
+                            <div class="project-overlay"></div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">TrainsTicket</h3>
+                            <p class="project-description"></p>
+                            <div class="project-tech">
+                                <span>Angular</span>
+                                <span>TypeScript</span>
+                                <span>API</span>
+                            </div>
+                            <a href="https://booking-trains.vercel.app/" target="_blank" class="project-btn">
+                                View Project
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card animate-in">
+                        <div class="project-image">
+                            <img src="images/Screenshot 2025-08-03 230636.png" alt="Project 2" class="project-img">
+                            <div class="project-overlay"></div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">OnlineShop</h3>
+                            <p class="project-description"></p>
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JS</span>
+                                <span>API</span>
+                            </div>
+                            <a href="https://shopverse-nika.netlify.app/" target="_blank" class="project-btn">
+                                View Project
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card animate-in">
+                        <div class="project-image">
+                            <img src="images/Screenshot 2025-08-05 180002.png" alt="Project 3" class="project-img">
+                            <div class="project-overlay"></div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">NFT-Marketplace</h3>
+                            <p class="project-description"></p>
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JS</span>
+                            </div>
+                            <a href="https://nft-marketplace-nika.netlify.app/" target="_blank" class="project-btn">
+                                View Project
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="project-card animate-in">
+                        <div class="project-image">
+                            <img src="images/Screenshot 2025-08-05 180538.png" alt="Project 4" class="project-img">
+                            <div class="project-overlay"></div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">TOP-Cars</h3>
+                            <p class="project-description"></p>
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JS</span>
+                            </div>
+                            <a href="https://topcars-nika.netlify.app/" target="_blank" class="project-btn">
+                                View Project
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="slider-nav prev" aria-label="Previous project">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="slider-nav next" aria-label="Next project">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+
+                <div class="slider-dots"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            <h2 class="section-title">
+                <span class="title-line">Get In Touch</span>
+            </h2>
+            <p class="section-subtitle animate-in">I'd love to hear from you</p>
+
+            <div class="contact-content">
+                <div class="contact-form animate-in">
+                    <form id="contactForm" class="form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name">Your Name</label>
+                            <div class="underline"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">Your Email</label>
+                            <div class="underline"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone">
+                            <label for="phone">Phone Number</label>
+                            <div class="underline"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                            <label for="message">Your Message</label>
+                            <div class="underline"></div>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            Send Message
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <div class="contact-info animate-in">
+                    <h3 class="info-title">Contact Information</h3>
+                    <p class="info-text">Feel free to reach out to me directly</p>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-content">
+                            <span class="info-label">Email</span>
+                            <a href="mailto:cercvadzenika95@gmail.com" class="info-value">cercvadzenika95@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="info-content">
+                            <span class="info-label">Phone</span>
+                            <a href="tel:+995595073230" class="info-value">+995 595 073 230</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span>N</span>
+                    </div>
+                    <div class="footer-info">
+                        <h3>Nikoloz Tsertsvadze</h3>
+                        <p>Front-End Developer</p>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4 class="footer-title">Get In Touch</h4>
+                    <ul>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:cercvadzenika95@gmail.com">cercvadzenika95@gmail.com</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+995595073230">+995 595 073 230</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Nikoloz Tsertsvadze. All rights reserved.</p>
+                <p>Made with <i class="fas fa-heart"></i> and <i class="fas fa-code"></i></p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
