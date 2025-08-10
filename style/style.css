@@ -1,3 +1,6 @@
+/* ===========================
+   GLOBAL RESET
+=========================== */
 * {
     margin: 0;
     padding: 0;
@@ -20,7 +23,9 @@ body {
     color: #fff;
 }
 
-/* Header Styles */
+/* ===========================
+   HEADER
+=========================== */
 .header-container {
     display: flex;
     justify-content: space-between;
@@ -43,6 +48,9 @@ body {
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
 }
 
+/* ===========================
+   LOGO
+=========================== */
 .logo {
     display: flex;
     gap: 12px;
@@ -58,14 +66,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #8a1ee2, #6a0dad);
+    background: linear-gradient(135deg, #8a1ee2, #5e8cff);
     border-radius: 50%;
-    width: 36px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
     color: white;
     font-size: 20px;
     font-weight: 600;
-    box-shadow: 0 4px 8px rgba(138, 30, 226, 0.3);
+    box-shadow: 0 4px 8px rgba(138, 30, 226, 0.4);
 }
 
 .logo h3 {
@@ -75,6 +83,9 @@ body {
     letter-spacing: 0.5px;
 }
 
+/* ===========================
+   DESKTOP MENU
+=========================== */
 .menu {
     display: flex;
     gap: 2.5rem;
@@ -108,13 +119,19 @@ body {
     width: 100%;
 }
 
+.menu-logo{
+    display: none;
+}
+
+/* ===========================
+   BURGER ICON
+=========================== */
 .burger-menu {
     display: none;
     flex-direction: column;
     justify-content: space-between;
     width: 28px;
     height: 20px;
-    background: transparent;
     cursor: pointer;
     z-index: 1001;
     transition: transform 0.3s ease;
@@ -145,30 +162,99 @@ body {
     transform: translateY(-8px) rotate(-45deg);
 }
 
-/* Responsive styles */
+
+
+/* Social icons in menu */
+.menu-socials {
+    display: none;
+}
+
+/* ===========================
+   MOBILE MENU
+=========================== */
 @media (max-width: 768px) {
     .menu {
         position: fixed;
         top: 0;
         right: -100%;
-        width: 70%;
-        max-width: 300px;
+        width: 75%;
+        max-width: 320px;
         height: 100vh;
-        background-color: rgba(20, 20, 20, 0.95);
+        background-color: rgba(20, 20, 20, 0.96);
         backdrop-filter: blur(15px);
         -webkit-backdrop-filter: blur(15px);
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        gap: 2.5rem;
+        gap: 1.8rem;
         transition: right 0.4s ease-in-out;
         z-index: 999;
+        overflow-y: auto;
     }
 
     .menu.active {
         right: 0;
     }
 
+    /* Logo in menu */
+    .menu-logo {
+        width: 100%;
+        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1rem;
+        animation: fadeDown 0.6s ease forwards;
+        border-bottom: 2px solid #8a1ee2;
+        padding: 1rem 0;
+    }
+
+    .menu-logo .logo_list {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+        box-shadow: 0 6px 15px rgba(138, 30, 226, 0.4);
+    }
+
+    .menu-logo h3 {
+        font-size: 1.2rem;
+        margin-top: 0.4rem;
+        color: #fff;
+    }
+
+    /* Animate menu links */
+    .menu_list {
+        font-size: 1.1rem;
+        opacity: 0;
+        transform: translateY(15px);
+        animation: menuFade 0.5s ease forwards;
+    }
+
+    .menu_list:nth-child(2) {
+        animation-delay: 0.15s;
+    }
+
+    .menu_list:nth-child(3) {
+        animation-delay: 0.25s;
+    }
+
+    .menu_list:nth-child(4) {
+        animation-delay: 0.35s;
+    }
+
+    .menu_list:nth-child(5) {
+        animation-delay: 0.45s;
+    }
+
+    .menu_list:nth-child(6) {
+        animation-delay: 0.55s;
+    }
+
+    .menu_list:nth-child(7) {
+        animation-delay: 0.65s;
+    }
+
+    /* Burger icon visible */
     .burger-menu {
         display: flex;
     }
@@ -180,7 +266,67 @@ body {
     .header-container.scrolled {
         padding: 1rem;
     }
+
+    /* menu-socials*/
+
+    .menu-socials {
+        width: 100%;
+        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.2rem;
+        padding: 1rem 0;
+        border-top: 2px solid #8a1ee2;
+    }
+    
+    .social-link {
+        font-size: 1.5rem;
+        color: #ccc;
+        transition: all 0.3s ease;
+    }
+    
+    .social-link:hover {
+        color: #fff;
+        transform: scale(1.2);
+    }
+    
+    .social-link:nth-child(1):hover {
+        color: #f5f5f5; /* GitHub hover */
+    }
+    
+    .social-link:nth-child(2):hover {
+        color: #1877f2; /* Facebook blue */
+    }
+    
+    .social-link:nth-child(3):hover {
+        color: #e4405f; /* Instagram pink */
+    }
+    
 }
+
+/* ===========================
+   ANIMATIONS
+=========================== */
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes menuFade {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 /* ==================== */
 /* HERO SECTION STYLES */
@@ -507,7 +653,7 @@ body {
     width: 100%;
     height: 100%;
     background: radial-gradient(circle at 20% 30%, rgba(138, 30, 226, 0.05) 0%, transparent 30%),
-                radial-gradient(circle at 80% 70%, rgba(94, 140, 255, 0.05) 0%, transparent 30%);
+        radial-gradient(circle at 80% 70%, rgba(94, 140, 255, 0.05) 0%, transparent 30%);
     z-index: 1;
 }
 
@@ -686,10 +832,25 @@ body {
     transition: all 0.3s ease;
 }
 
-.tech-icons i:nth-child(1) { color: #e34f26; transform: translate(-30px, -30px); }
-.tech-icons i:nth-child(2) { color: #2965f1; transform: translate(30px, -30px); }
-.tech-icons i:nth-child(3) { color: #f7df1e; transform: translate(-30px, 30px); }
-.tech-icons i:nth-child(4) { color: #dd0031; transform: translate(30px, 30px); }
+.tech-icons i:nth-child(1) {
+    color: #e34f26;
+    transform: translate(-30px, -30px);
+}
+
+.tech-icons i:nth-child(2) {
+    color: #2965f1;
+    transform: translate(30px, -30px);
+}
+
+.tech-icons i:nth-child(3) {
+    color: #f7df1e;
+    transform: translate(-30px, 30px);
+}
+
+.tech-icons i:nth-child(4) {
+    color: #dd0031;
+    transform: translate(30px, 30px);
+}
 
 .image-frame:hover .tech-icons i {
     opacity: 1;
@@ -700,7 +861,7 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: 
+    background:
         radial-gradient(circle at 20% 30%, rgba(138, 30, 226, 0.1) 0%, transparent 20%),
         radial-gradient(circle at 80% 70%, rgba(94, 140, 255, 0.1) 0%, transparent 20%);
     animation: float 8s infinite ease-in-out;
@@ -708,14 +869,32 @@ body {
 
 /* Animations */
 @keyframes float {
-    0%, 100% { transform: translate(0, 0); }
-    50% { transform: translate(10px, 10px); }
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(10px, 10px);
+    }
 }
 
 @keyframes pulse {
-    0% { transform: scale(1); opacity: 0.3; }
-    50% { transform: scale(1.05); opacity: 0.5; }
-    100% { transform: scale(1); opacity: 0.3; }
+    0% {
+        transform: scale(1);
+        opacity: 0.3;
+    }
+
+    50% {
+        transform: scale(1.05);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0.3;
+    }
 }
 
 .animate-in {
@@ -730,33 +909,50 @@ body {
 }
 
 /* Delay animations */
-.about-paragraph:nth-child(1) { animation-delay: 0.2s; }
-.about-paragraph:nth-child(2) { animation-delay: 0.4s; }
-.about-paragraph:nth-child(3) { animation-delay: 0.6s; }
-.stats-grid { animation-delay: 0.8s; }
-.skills-tags { animation-delay: 1s; }
-.about-image { animation-delay: 1.2s; }
+.about-paragraph:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.about-paragraph:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.about-paragraph:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.stats-grid {
+    animation-delay: 0.8s;
+}
+
+.skills-tags {
+    animation-delay: 1s;
+}
+
+.about-image {
+    animation-delay: 1.2s;
+}
 
 /* Responsive Styles */
 @media (max-width: 768px) {
     .about-section {
         padding: 6rem 1.5rem;
     }
-    
+
     .stats-grid {
         grid-template-columns: 1fr;
         max-width: 300px;
     }
-    
+
     .image-frame {
         width: 250px;
         height: 250px;
     }
-    
+
     .code-icon {
         font-size: 4rem;
     }
-    
+
     .tech-icons i {
         font-size: 2rem;
     }
